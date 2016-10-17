@@ -33,6 +33,5 @@
         "line": "10-13 15:39:27.517 I/GoogleURLConnFactory( 2118): Using platform SSLCertificateSocketFactory"
       }
     ]
-  },
-  "timestamp-field": "timestamp"
+  }
 }
