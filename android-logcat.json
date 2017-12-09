@@ -8,11 +8,12 @@
     ],
     "regex": {
       "std-logcat-time": {
-        "pattern": "^(?<timestamp>\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\.\\d{3}) (?<lc_status>.{1})/(?<tag>\\S+\\s*)\\((?<pid>\\s?\\d+)\\):(?<body>.*)"
+        "pattern": "^(?<timestamp>\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\.\\d{3}) (?<lc_status>.{1})\/(?<tag>.*)\\((?<pid>\\s*\\d+)\\): (?<body>.*)$"
       }
     },
     "level-field": "lc_status",
     "level": {
+      "fatal": "F",
       "error": "E",
       "warning": "W",
       "info": "I",
@@ -22,7 +23,7 @@
     "value": {
       "lc_status": {
         "kind": "string",
-        "foreign-key": true
+        "identifier": true
       }, 
       "tag" : {"kind":"string", "identifier": true},
       "pid" : {"kind":"integer", "identifier":true},
